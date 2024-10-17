@@ -11,6 +11,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <style>
+        @media (max-width: 768px) {
+    .row {
+      flex-direction: column; 
+      align-items: center;
+    }
+    
+    .about-col-1, .about-col-2 {
+      margin-bottom: 20px; 
+    }
+  
+    .about-col-1 img, .flashcard {
+      width: 100%;
+    }
+  }
         * {
             margin: 0;
             padding: 0;
@@ -77,36 +91,35 @@
          }
 
         #about{
-            padding:70px 0;
+            max-width: 1200px; /* Set a max-width for the container */
+  margin: 0 auto; 
+            padding:140px 0;
             color: rgb(88, 45, 129);
             font-size: 2.5rem;
         }
 
-        .row{
-            display: flex;
-            justify-content: space-around;
-            flex-wrap:wrap;
-        }
-        .about-col-1{
-            flex-basis: 35%;
-        }
-        .about-col-1 img{
-            width:100%;
-            border-radius:15px;
-        }
-        .flashcard {
-  width: 700px;
-  height: 650px;
+        .row {
+  display: flex;
+  align-items: center; /* Align image and flashcard vertically */
+  justify-content: space-around; /* Create space between image and flashcard */
+  gap: 20px; /* Optional: adds spacing between columns */
+}
+.about-col-1 img {
+  width: 100%; /* Make the image responsive */
+  max-width: 400px; /* Set a maximum width for the image */
+  height: auto;
+  border-radius: 10px; /* Optional: round corners for the image */
+}
+        
+.flashcard {
+  width: 100%; /* Make the flashcard responsive */
+  max-width: 400px; /* Set a maximum width for the flashcard */
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-  cursor: pointer;
-  margin: 50px;
+  padding: 20px;
 }
 
 /* Flashcard hover effect */
@@ -123,7 +136,7 @@
 
 /* Flashcard title */
 .flashcard-content h2 {
-  font-size: 44px;
+  font-size: 24px;
   margin-bottom: 10px;
   color: #333;
 }
@@ -177,7 +190,13 @@
                         <div class="flashcard">
                             <div class="flashcard-content">
                               <h2>About Me</h2>
-                              <p>This is the content of the flashcard. You can put any text or information here.</p>
+                              <p>I am an engineering student. I study at Graphic
+                                Era university.
+                                I can do web developmeny and little bit of machien learning.
+                                I  am a good problem solver and I am good at time management.
+                                I can do public speaking too.
+
+                              </p>
                             </div>
                           </div>
                     
