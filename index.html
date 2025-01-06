@@ -147,6 +147,25 @@
   color: #666;
 }
 
+.worklist{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
     </style>
 
 </head>
@@ -200,6 +219,41 @@
                             </div>
                           </div>
                     
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <div class="container">
+                <div class="subtitle">Projects</div>
+                <div class="worklist">
+                    <div class="work"><img src="spotify.jpg" alt="">
+                    <div class="layer"><h3>Spotify Clone</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, unde.</p>
+                    <a href="#"><i class="fa-solid fa-link" style="
+                        background-color: black;
+                        color: white;
+                        padding: 10px;
+                        border-radius: 5px;
+                        font-size: 24px;
+                    ">></i></a>
+                </div>
+            </div>
+
+            <div class="work"><img src="cpp.png" alt="">
+                <div class="layer"><h3>Spotify Clone</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, unde.</p>
+                <a href="#"><i class="fa-solid fa-link" style="
+                    background-color: black;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-size: 24px;
+                ">></i></a>
+            </div>
+        </div>
+
+                    <div class="work"><img src="cpp.png" alt=""></div>
                 </div>
             </div>
         </div>
