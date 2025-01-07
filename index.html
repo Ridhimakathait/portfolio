@@ -7,164 +7,231 @@
     <title>Ridhima's Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <style>
         @media (max-width: 768px) {
-    .row {
-      flex-direction: column; 
-      align-items: center;
-    }
-    
-    .about-col-1, .about-col-2 {
-      margin-bottom: 20px; 
-    }
-  
-    .about-col-1 img, .flashcard {
-      width: 100%;
-    }
-  }
+            .row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-col-1,
+            .about-col-2 {
+                margin-bottom: 20px;
+            }
+
+            .about-col-1 img,
+            .flashcard {
+                width: 100%;
+            }
+        }
+
         * {
             margin: 0;
             padding: 0;
         }
 
         body {
-            background-color:white;
+            background-color: white;
             color: white;
         }
-        nav{
+
+        nav {
             display: flex;
             justify-content: space-around;
             align-items: center;
             height: 80px;
             background-color: rgb(65, 65, 77);
         }
-        nav ul{
+
+        nav ul {
             display: flex;
             justify-content: center;
         }
-        nav ul li{
+
+        nav ul li {
             list-style: none;
             margin: 0 23px;
         }
 
-        nav ul li a{
+        nav ul li a {
             text-decoration: none;
             color: white;
         }
-        nav ul li a:hover{
+
+        nav ul li a:hover {
             color: rgb(122, 122, 160);
         }
 
-        .left{
+        .left {
             font-size: 1.5rem;
         }
 
-        .firstsection{
+        .firstsection {
             display: flex;
             justify-content: space-around;
             align-items: center;
             margin: 80px 0;
         }
 
-        .firstsection > div{
+        .firstsection>div {
             width: 30%;
         }
 
-        .leftsection{
+        .leftsection {
             color: black;
             font-size: 3rem;
-            font-weight:500; 
+            font-weight: 500;
         }
 
-        .rightsection img{
+        .rightsection img {
             width: 90%;
         }
 
-        .purple{
+        .purple {
             color: rgb(88, 45, 129);
         }
-         #element{
-            color: rgb(88, 45, 129);
-         }
 
-        #about{
-            max-width: 1200px; /* Set a max-width for the container */
-  margin: 0 auto; 
-            padding:140px 0;
+        #element {
+            color: rgb(88, 45, 129);
+        }
+
+        #about {
+            max-width: 1200px;
+            /* Set a max-width for the container */
+            margin: 0 auto;
+            padding: 140px 0;
             color: rgb(88, 45, 129);
             font-size: 2.5rem;
         }
 
         .row {
-  display: flex;
-  align-items: center; /* Align image and flashcard vertically */
-  justify-content: space-around; /* Create space between image and flashcard */
-  gap: 20px; /* Optional: adds spacing between columns */
-}
-.about-col-1 img {
-  width: 100%; /* Make the image responsive */
-  max-width: 400px; /* Set a maximum width for the image */
-  height: auto;
-  border-radius: 10px; /* Optional: round corners for the image */
-}
-        
-.flashcard {
-  width: 100%; /* Make the flashcard responsive */
-  max-width: 400px; /* Set a maximum width for the flashcard */
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  padding: 20px;
-}
+            display: flex;
+            align-items: center;
+            /* Align image and flashcard vertically */
+            justify-content: space-around;
+            /* Create space between image and flashcard */
+            gap: 20px;
+            /* Optional: adds spacing between columns */
+        }
 
-/* Flashcard hover effect */
-.flashcard:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+        .about-col-1 img {
+            width: 100%;
+            /* Make the image responsive */
+            max-width: 400px;
+            /* Set a maximum width for the image */
+            height: auto;
+            border-radius: 10px;
+            /* Optional: round corners for the image */
+        }
 
-/* Flashcard content */
-.flashcard-content {
-  text-align: center;
-  padding: 20px;
-}
+        .flashcard {
+            width: 100%;
+            /* Make the flashcard responsive */
+            max-width: 400px;
+            /* Set a maximum width for the flashcard */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            padding: 20px;
+        }
 
-/* Flashcard title */
-.flashcard-content h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
-}
+        /* Flashcard hover effect */
+        .flashcard:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-/* Flashcard text */
-.flashcard-content p {
-  font-size: 16px;
-  color: #666;
-}
+        /* Flashcard content */
+        .flashcard-content {
+            text-align: center;
+            padding: 20px;
+        }
 
-.worklist{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
+        /* Flashcard title */
+        .flashcard-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
 
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
+        /* Flashcard text */
+        .flashcard-content p {
+            font-size: 16px;
+            color: #666;
+        }
 
-.work img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-}
+        .worklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
+
+        .work {
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .layer{
+            width:100%;
+            height:0;
+            background:linear-gradient(rgba(0,0,0,0.6),#eb518267);
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 11px 12px;
+            text-align: center;
+            font-size: 14px;
+            transition: height 0.5s;
+
+        }
+
+        .layer h3{
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .layer a{
+            margin-top:20px;
+            color:rebeccapurple ;
+            text-decoration:solid;
+            font-size: 18px;
+            line-height: 60px;
+            background: #ffffff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .work:hover img{
+            transform: scale(1.1);
+        }
+        .work:hover .layer{
+            height: 100%;
+            transform: scale(1.1);
+        }
 
     </style>
 
@@ -188,7 +255,7 @@
         <section class="firstsection">
             <div class="leftsection">
                 Hi, My name is <span class="purple">Ridhima</span>
-                <div>and I am a passionate </div> 
+                <div>and I am a passionate </div>
                 <div>Engineering student</div>
                 <span id="element"></span>
             </div>
@@ -205,68 +272,101 @@
                     </div>
                     <div class="about-col-2">
 
-                       
+
                         <div class="flashcard">
                             <div class="flashcard-content">
-                              <h2>About Me</h2>
-                              <p>I am an engineering student. I study at Graphic
-                                Era university.
-                                I can do web developmeny and little bit of machien learning.
-                                I  am a good problem solver and I am good at time management.
-                                I can do public speaking too.
+                                <h2>About Me</h2>
+                                <p>I am an engineering student. I study at Graphic
+                                    Era university.
+                                    I can do web developmeny and little bit of machien learning.
+                                    I am a good problem solver and I am good at time management.
+                                    I can do public speaking too.
 
-                              </p>
+                                </p>
                             </div>
-                          </div>
-                    
-                </div>
-            </div>
-        </div>
+                        </div>
 
-        <div id="portfolio">
-            <div class="container">
-                <div class="subtitle">Projects</div>
-                <div class="worklist">
-                    <div class="work"><img src="spotify.jpg" alt="">
-                    <div class="layer"><h3>Spotify Clone</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, unde.</p>
-                    <a href="#"><i class="fa-solid fa-link" style="
-                        background-color: black;
-                        color: white;
-                        padding: 10px;
-                        border-radius: 5px;
-                        font-size: 24px;
-                    ">></i></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="work"><img src="cpp.png" alt="">
-                <div class="layer"><h3>Spotify Clone</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, unde.</p>
-                <a href="#"><i class="fa-solid fa-link" style="
-                    background-color: black;
-                    color: white;
+            <div id="portfolio">
+                <div class="container">
+                    <div class="subtitle">Projects</div>
+                    <div class="worklist">
+                        <div class="work"><img src="spotify.jpg" alt="">
+                            <div class="layer">
+                                <h3>Spotify Clone</h3>
+                                <p>Lorem ipsum dolor sit amet 
+                                    consectetur, adipisicing elit. Dolores, unde.</p>
+                                <a href="#"><i class="fa-solid fa-link" style="
+                        color: purple;
                     padding: 10px;
                     border-radius: 5px;
-                    font-size: 24px;
-                ">></i></a>
-            </div>
-        </div>
+                    font-size: 30px;
+                    ">></i></a>
+                            </div>
+                        </div>
 
-                    <div class="work"><img src="cpp.png" alt=""></div>
+                        <div class="work"><img src="cpp.png" alt="">
+                            <div class="layer">
+                                <h3>Spotify Clone</h3>
+                                <p>Lorem ipsum dolor sit amet
+                                     consectetur, adipisicing elit. Dolores, unde.</p>
+                                <a href="#"><i class="fa-solid fa-link" style="
+                    color: purple;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-size: 30px;
+                ">></i>></i></a>
+                            </div>
+                        </div>
+
+                        <div class="work"><img src="cpp.png" alt="">
+                            <div class="layer">
+                                <h3>Spotify Clone</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, unde.</p>
+                                <a href="#"><i class="fa-solid fa-link" style="
+                    
+                    color: purple;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-size: 30px;
+                "></i>></i></a>
+                            </div>
+                        </div>
+                    </div>
+                   <!--<a href="#"></a>-->
                 </div>
             </div>
+<!-- contact -->
+
+<div id="container">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>ridhima.kathait@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/ridhima.kathait/"><img src="insta.svg" height="40px"></a>
+                    <a href="https://in.linkedin.com/in/ridhima-kathait-3229561a0"><img src="in.svg" height="40px"></a>
+                    <a href="https://github.com/Ridhimakathait"><img src="git.svg" height="40px"></a>
+                </div>
+            </div>
+            <div class="contact-right"></div>
         </div>
+    </div>
+</div>
 
     </main>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-          strings: ['Computer Science-AI and ML'],
+            strings: ['Computer Science-AI and ML'],
 
-          typeSpeed: 70,
+            typeSpeed: 70,
         });
-      </script>
+    </script>
 </body>
 
 </html>
