@@ -137,7 +137,7 @@
         .flashcard {
             width: 100%;
             /* Make the flashcard responsive */
-            max-width: 400px;
+            max-width: 489px;
             /* Set a maximum width for the flashcard */
             background-color: #fff;
             border-radius: 10px;
@@ -162,7 +162,7 @@
         /* Flashcard title */
         .flashcard-content h2 {
             font-size: 24px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: #333;
         }
 
@@ -242,6 +242,24 @@
             transform: scale(1.1);
         }
 
+
+        .flashcard2{
+            margin: 77px 378px;
+            width: 100%;
+            max-width: 400px;
+            background-color: #f3ecf4;
+            border-radius: 21px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            padding: 3px;
+        }
+
+        .flashcard2:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
         .contact-left{
             flex-basis: 35%;
         }
@@ -289,7 +307,12 @@
             margin-top: 20px;
             cursor: pointer;
         }
-
+        #msg{
+            color: #e254d1;
+    margin-top: 26px;
+    display: block;
+    font-size: 22px;
+        }
 
     </style>
 
@@ -313,8 +336,8 @@
         <section class="firstsection">
             <div class="leftsection">
                 Hi, My name is <span class="purple">Ridhima Kathait</span>
-                <div>and I am a passionate </div>
-                <div>Engineering student</div>
+
+                <div> I am an aspiring engineer </div>
                 <span id="element"></span>
             </div>
             <div class="rightsection">
@@ -334,11 +357,8 @@
                         <div class="flashcard">
                             <div class="flashcard-content">
                                 <h2>About Me</h2>
-                                <p>I am an engineering student. I study at Graphic
-                                    Era Deemed to be university.
-                                    I can do web development and am currently exploring machiene learning.
-                                    I am a good problem solver and I love learning about the tech world.
-                                    I can do public speaking too.
+                                <p>I am an engineering student at Graphic Era Deemed to be University with a strong passion for technology and innovation. Skilled in web development, I enjoy creating dynamic and user-friendly websites, and I am currently exploring the exciting world of machine learning. Problem-solving is one of my core strengths, and I love tackling challenges that push me to think creatively and grow intellectually. With an insatiable curiosity for learning, I stay updated on the latest trends in technology and aspire to use my skills to contribute meaningfully to the tech world. I am looking forward to collaborating on impactful projects.
+                                
 
                                 </p>
                             </div>
@@ -350,12 +370,12 @@
 
             <div id="portfolio">
                 <div class="container" style="margin-top:183px">
-                    <div class="subtitle">Projects</div>
+                    <div class="subtitle" style="padding-top: 20px;">Projects</div>
                     <div class="worklist">
                         <div class="work"><img src="spotify.jpg" alt="">
                             <div class="layer">
                                 <h3>Spotify Clone</h3>
-                                <p>This clones the landing page of Spotify-music player app.</p>
+                                <p>A replica of the Spotify landing page, this project integrates advanced front-end development techniques to deliver a polished and responsive user experience. Built using HTML, CSS, and JavaScript, it incorporates dynamic styling, interactive components, and a mobile-first design approach.</p>
                                 <a href="https://piedpiper.freewebhostmost.com/"><img src="link.svg" alt=""></a>
                             </div>
                         </div>
@@ -363,7 +383,7 @@
                         <div class="work"><img src="cpp.png" alt="">
                             <div class="layer">
                                 <h3>c++ cheatsheet</h3>
-                                <p>This is a cpp cheatsheet.It's still under construction.</p>
+                                <p>This is a cpp cheatsheet. It's still under construction.</p>
                                 <a href="https://ridhimakathait.github.io/cheatsheet_tempelate/"><img src="link.svg" alt=""></a>
                             </div>
                         </div>
@@ -371,9 +391,14 @@
                         <div class="work"><img src="ml.jpg" alt="">
                             <div class="layer">
                                 <h3>Automatic attendance system</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquid tempore amet reiciendis nihil qui, quas doloribus nisi sit non assumenda eligendi iusto magni facilis autem nam vero eveniet ratione corporis fuga, reprehenderit eius porro animi deserunt?</p>
+                                <p>This project uses machine learning and facial recognition to automate the attendance management process. It leverages Convolutional Neural Networks (CNNs) for face detection and recognition to track and log attendance accurately in real-time. The system aims to reduce human intervention, minimize errors, and increase efficiency in attendance management.</p>
                                 <a href="https://github.com/Ridhimakathait/attendance-system1"><img src="link.svg" alt=""></a>
                             </div>
+                        </div>
+                    </div>
+                    <div class="flashcard2">
+                        <div class="flashcard-content">
+                            <h2>more loading...</h2>
                         </div>
                     </div>
                    <!--<a href="#"></a>-->
@@ -400,6 +425,7 @@
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn">submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -418,11 +444,18 @@
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxoruXsQ4D55Yyj3028OITp29ufFb_xH5Gw8Snjr0e02k7DVK2OJNJfb7MRbsjahkvF/exec'
     const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
   
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
+        .then(response => {
+            msg.innerHTML="Message sent succesfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
         .catch(error => console.error('Error!', error.message))
     })
   </script>
