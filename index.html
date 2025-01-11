@@ -444,21 +444,26 @@
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxoruXsQ4D55Yyj3028OITp29ufFb_xH5Gw8Snjr0e02k7DVK2OJNJfb7MRbsjahkvF/exec'
     const form = document.forms['submit-to-google-sheet']
-    const msg=document.getElementById("msg")
+    const msg = document.getElementById("msg")
   
     form.addEventListener('submit', e => {
       e.preventDefault()
+      msg.innerHTML = "Submitting..."; // Display the message immediately
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
-            msg.innerHTML="Message sent succesfully"
+            msg.innerHTML = "Message sent successfully";
             setTimeout(function(){
-                msg.innerHTML=""
-            },5000)
+                msg.innerHTML = ""
+            }, 5000)
             form.reset()
         })
-        .catch(error => console.error('Error!', error.message))
+        .catch(error => {
+            msg.innerHTML = "Error! Please try again.";
+            console.error('Error!', error.message)
+        })
     })
-  </script>
+</script>
+
 </body>
 
 </html>
